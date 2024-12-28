@@ -10,13 +10,10 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
-  Devel::FindRef
-  Devel::StackTrace
   ExtUtils::MakeMaker
   Perl::Critic
   Perl::Critic::Policy
   Perl::Critic::Utils
-  Scalar::Util
   Test::More
 );
 

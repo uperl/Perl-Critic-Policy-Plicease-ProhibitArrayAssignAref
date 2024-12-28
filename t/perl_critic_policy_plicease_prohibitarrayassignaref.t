@@ -23,10 +23,6 @@ use strict;
 use warnings;
 use Test::More tests => 37;
 
-use lib 't';
-use MyTestHelpers;
-BEGIN { MyTestHelpers::nowarnings() }
-
 require Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref;
 
 
