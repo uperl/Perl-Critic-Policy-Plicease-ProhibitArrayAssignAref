@@ -2,10 +2,6 @@
 
 Don't assign an anonymous arrayref to an array
 
-# VERSION
-
-version 99
-
 # DESCRIPTION
 
 This policy is a fork of [Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref](https://metacpan.org/pod/Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref).
