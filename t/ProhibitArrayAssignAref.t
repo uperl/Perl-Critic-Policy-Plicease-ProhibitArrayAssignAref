@@ -27,24 +27,24 @@ use lib 't';
 use MyTestHelpers;
 BEGIN { MyTestHelpers::nowarnings() }
 
-require Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref;
+require Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref;
 
 
 #-----------------------------------------------------------------------------
 my $want_version = 99;
-is ($Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref::VERSION, $want_version, 'VERSION variable');
-is (Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref->VERSION, $want_version, 'VERSION class method');
+is ($Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref::VERSION, $want_version, 'VERSION variable');
+is (Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION, $want_version, 'VERSION class method');
 {
-  ok (eval { Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref->VERSION($want_version); 1 }, "VERSION class check $want_version");
+  ok (eval { Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION($want_version); 1 }, "VERSION class check $want_version");
   my $check_version = $want_version + 1000;
-  ok (! eval { Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref->VERSION($check_version); 1 }, "VERSION class check $check_version");
+  ok (! eval { Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION($check_version); 1 }, "VERSION class check $check_version");
 }
 
 #-----------------------------------------------------------------------------
 require Perl::Critic;
 my $critic = Perl::Critic->new
   ('-profile' => '',
-   '-single-policy' => '^Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref$');
+   '-single-policy' => '^Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref$');
 { my @p = $critic->policies;
   is (scalar @p, 1,
       'single policy ProhibitArrayAssignAref');

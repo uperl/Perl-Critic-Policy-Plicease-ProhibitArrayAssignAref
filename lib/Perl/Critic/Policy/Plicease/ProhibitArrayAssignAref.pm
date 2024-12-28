@@ -18,7 +18,7 @@
 # perlcritic -s ProhibitArrayAssignAref /usr/lib/perl5/Template/Test.pm
 
 
-package Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref;
+package Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref;
 use 5.006;
 use strict;
 use warnings;
@@ -33,7 +33,7 @@ our $VERSION = 99;
 
 use constant supported_parameters => ();
 use constant default_severity     => $Perl::Critic::Utils::SEVERITY_MEDIUM;
-use constant default_themes       => qw(pulp bugs);
+use constant default_themes       => ();
 use constant applies_to           => ('PPI::Token::Symbol',
                                       'PPI::Token::Cast');
 
@@ -82,7 +82,7 @@ __END__
 
 =head1 NAME
 
-Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref - don't assign an anonymous arrayref to an array
+Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref - don't assign an anonymous arrayref to an array
 
 =head1 DESCRIPTION
 
