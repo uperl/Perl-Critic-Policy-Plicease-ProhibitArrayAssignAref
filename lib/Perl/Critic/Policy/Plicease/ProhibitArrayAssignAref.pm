@@ -19,17 +19,18 @@
 
 
 package Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref;
+
 use 5.006;
 use strict;
 use warnings;
-
 use base 'Perl::Critic::Policy';
 use Perl::Critic::Utils;
 
 # uncomment this to run the ### lines
 #use Smart::Comments;
 
-our $VERSION = 99;
+# ABSTRACT: Don't assign an anonymous arrayref to an array
+# VERSION
 
 use constant supported_parameters => ();
 use constant default_severity     => $Perl::Critic::Utils::SEVERITY_MEDIUM;
@@ -77,10 +78,6 @@ sub violates {
 
 1;
 __END__
-
-=head1 NAME
-
-Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref - don't assign an anonymous arrayref to an array
 
 =head1 DESCRIPTION
 
