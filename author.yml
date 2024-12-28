@@ -7,6 +7,7 @@ pod_spelling_system:
    - GPL3
    - MERCHANTABILITY
    - Ryde
+   - recognised
 
 pod_coverage:
   skip: 0
