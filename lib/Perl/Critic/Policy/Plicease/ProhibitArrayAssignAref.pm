@@ -1,17 +1,17 @@
 # Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2021 Kevin Ryde
 
-# Perl-Critic-Pulp is free software; you can redistribute it and/or modify
+# Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by the
 # Free Software Foundation; either version 3, or (at your option) any later
 # version.
 #
-# Perl-Critic-Pulp is distributed in the hope that it will be useful, but
+# Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
 # or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
 # for more details.
 #
 # You should have received a copy of the GNU General Public License along
-# with Perl-Critic-Pulp.  If not, see <http://www.gnu.org/licenses/>.
+# with Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref.  If not, see <http://www.gnu.org/licenses/>.
 
 
 # eg.
@@ -78,16 +78,17 @@ sub violates {
 1;
 __END__
 
-=for stopwords Ryde arrayref parens Derefs Dereferences
-
 =head1 NAME
 
 Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref - don't assign an anonymous arrayref to an array
 
 =head1 DESCRIPTION
 
-This policy is part of the L<C<Perl::Critic::Pulp>|Perl::Critic::Pulp>
-add-on.  It asks you not to assign an anonymous arrayref to an array
+This policy is a fork of L<Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref>.
+It differs from the original by not having a dependency on L<List::MoreUtils>.
+It is unfortunately still licensed as GPL3.
+
+It asks you not to assign an anonymous arrayref to an array
 
     @array = [ 1, 2, 3 ];       # bad
 
@@ -157,28 +158,37 @@ The C<qw> form gives a list too
 
 =head1 SEE ALSO
 
-L<Perl::Critic>,
-L<Perl::Critic::Pulp>
+=over 4
+
+=item L<Perl::Critic>
+
+=item L<Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref>
+
+=back
 
 =head1 HOME PAGE
 
-http://user42.tuxfamily.org/perl-critic-pulp/index.html
+=over 4
+
+=item L<https://github.com/uperl/Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref>
+
+=back
 
 =head1 COPYRIGHT
 
 Copyright 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2021 Kevin Ryde
 
-Perl-Critic-Pulp is free software; you can redistribute it and/or modify it
+Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref is free software; you can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the Free
 Software Foundation; either version 3, or (at your option) any later
 version.
 
-Perl-Critic-Pulp is distributed in the hope that it will be useful, but
+Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
 or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
 more details.
 
 You should have received a copy of the GNU General Public License along with
-Perl-Critic-Pulp.  If not, see <http://www.gnu.org/licenses>.
+Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref.  If not, see <http://www.gnu.org/licenses>.
 
 =cut
