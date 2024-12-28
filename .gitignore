@@ -1,0 +1,4 @@
+/Perl-Critic-Policy-Plicease-ProhibitArrayAssignAref-*
+/.build
+*.old
+*.orig
