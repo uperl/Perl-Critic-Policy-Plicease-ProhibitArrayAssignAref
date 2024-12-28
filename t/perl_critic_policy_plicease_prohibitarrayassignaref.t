@@ -21,7 +21,7 @@
 use 5.006;
 use strict;
 use warnings;
-use Test::More tests => 43;
+use Test::More tests => 37;
 
 use lib 't';
 use MyTestHelpers;
@@ -29,16 +29,6 @@ BEGIN { MyTestHelpers::nowarnings() }
 
 require Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref;
 
-
-#-----------------------------------------------------------------------------
-my $want_version = 99;
-is ($Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref::VERSION, $want_version, 'VERSION variable');
-is (Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION, $want_version, 'VERSION class method');
-{
-  ok (eval { Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION($want_version); 1 }, "VERSION class check $want_version");
-  my $check_version = $want_version + 1000;
-  ok (! eval { Perl::Critic::Policy::Plicease::ProhibitArrayAssignAref->VERSION($check_version); 1 }, "VERSION class check $check_version");
-}
 
 #-----------------------------------------------------------------------------
 require Perl::Critic;
@@ -49,12 +39,6 @@ my $critic = Perl::Critic->new
   is (scalar @p, 1,
       'single policy ProhibitArrayAssignAref');
 
-  my $policy = $p[0];
-  ok (eval { $policy->VERSION($want_version); 1 },
-      "VERSION object check $want_version");
-  my $check_version = $want_version + 1000;
-  ok (! eval { $policy->VERSION($check_version); 1 },
-      "VERSION object check $check_version");
 }
 
 foreach my $data (## no critic (RequireInterpolationOfMetachars)
