@@ -25,7 +25,6 @@ use warnings;
 
 use base 'Perl::Critic::Policy';
 use Perl::Critic::Utils;
-use Perl::Critic::Pulp;
 
 # uncomment this to run the ### lines
 #use Smart::Comments;
